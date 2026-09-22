@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <defs>
+    <linearGradient id="bg-29" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c" />
+      <stop offset="55%" stop-color="#131313" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="vig-29" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+    </radialGradient>
+    <filter id="grain-29">
+      <feTurbulence type="fractalNoise" baseFrequency="0.90" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="700" fill="url(#bg-29)" />
+  <rect width="1000" height="700" fill="#383838" opacity="0.15" />
+  
+    <g stroke="#d8d5cd" stroke-width="8.4" fill="none" opacity="0.5" stroke-linecap="round">
+      <path d="M 500 168 L 542 280 L 654 308 L 556 378 L 584 490 L 500 406 L 416 490 L 444 378 L 346 308 L 458 280 Z" />
+    </g>
+  <rect width="1000" height="700" filter="url(#grain-29)" opacity="0.6" />
+  <rect width="1000" height="700" fill="url(#vig-29)" />
+
+  <rect x="18" y="18" width="964" height="664" fill="none" stroke="#d8d5cd" stroke-opacity="0.25" stroke-width="1" />
+
+  <text x="34" y="46" font-family="Jost, sans-serif" font-size="15" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.65">CUSTOM ITEMS</text>
+
+  <text x="500" y="636" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" letter-spacing="4" fill="#d8d5cd" fill-opacity="0.5">PLACEHOLDER IMAGE</text>
+  <text x="500" y="662" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#ece9e2" fill-opacity="0.85">Body Art — Guitar</text>
+</svg>

@@ -1,0 +1,52 @@
+/**
+ * Opt-in @font-face declarations for a licensed premium Chicano/blackletter
+ * font (Chico Mato, Qustyle, or Kingdom of Heaven). See README.md in this
+ * folder for the activation steps — this file is inert until you rename it
+ * to `premium-fonts.css` and add a font `@import` for it in src/index.css.
+ *
+ * Uncomment ONE of the three blocks below, matching the font you licensed.
+ * Delete the others. Font files referenced here must actually exist in this
+ * folder or the build will fail to resolve them.
+ */
+
+/* --- Option A: Chico Mato — closest match to the Chicano tattoo-lettering
+   reference image; a commercial script/blackletter hybrid, not on Google
+   Fonts. Confirm the exact family name printed in your license/font file,
+   it may differ slightly from "Chico Mato". ------------------------------ */
+/*
+@font-face {
+  font-family: "Chico Mato";
+  src:
+    url("./chico-mato.woff2") format("woff2"),
+    url("./chico-mato.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* --- Option B: Qustyle -------------------------------------------------- */
+/*
+@font-face {
+  font-family: "Qustyle";
+  src:
+    url("./qustyle.woff2") format("woff2"),
+    url("./qustyle.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* --- Option C: Kingdom of Heaven ----------------------------------------- */
+/*
+@font-face {
+  font-family: "Kingdom of Heaven";
+  src:
+    url("./kingdom-of-heaven.woff2") format("woff2"),
+    url("./kingdom-of-heaven.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/

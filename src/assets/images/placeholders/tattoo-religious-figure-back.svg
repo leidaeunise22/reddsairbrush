@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bg-10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c" />
+      <stop offset="55%" stop-color="#161616" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="vig-10" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+    </radialGradient>
+    <filter id="grain-10">
+      <feTurbulence type="fractalNoise" baseFrequency="0.70" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bg-10)" />
+  <rect width="800" height="1000" fill="#222222" opacity="0.15" />
+  
+    <g stroke="#d8d5cd" stroke-width="9.6" fill="none" opacity="0.5" stroke-linecap="round">
+      <path d="M 224 604 L 496 300 L 560 364 L 288 668 Z" />
+      <line x1="560" y1="364" x2="656" y2="268" />
+      <circle cx="672" cy="252" r="20" fill="#d8d5cd" />
+    </g>
+  <rect width="800" height="1000" filter="url(#grain-10)" opacity="0.6" />
+  <rect width="800" height="1000" fill="url(#vig-10)" />
+
+  <rect x="18" y="18" width="764" height="964" fill="none" stroke="#d8d5cd" stroke-opacity="0.25" stroke-width="1" />
+
+  <text x="34" y="46" font-family="Jost, sans-serif" font-size="15" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.65">TATTOOS</text>
+
+  <text x="400" y="936" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" letter-spacing="4" fill="#d8d5cd" fill-opacity="0.5">PLACEHOLDER IMAGE</text>
+  <text x="400" y="962" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#ece9e2" fill-opacity="0.85">Sacred Heart — Back Piece</text>
+</svg>

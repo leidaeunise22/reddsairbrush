@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <defs>
+    <linearGradient id="bg-21" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c" />
+      <stop offset="55%" stop-color="#131313" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="vig-21" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+    </radialGradient>
+    <filter id="grain-21">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="700" fill="url(#bg-21)" />
+  <rect width="1000" height="700" fill="#262626" opacity="0.15" />
+  
+    <g stroke="#d8d5cd" stroke-width="8.4" fill="none" opacity="0.5">
+      <rect x="304" y="224" width="392.00000000000006" height="196.00000000000003" rx="14" />
+      <line x1="360" y1="322" x2="640" y2="322" stroke-width="21" opacity="0.3" />
+      <circle cx="346" cy="252" r="8.4" fill="#d8d5cd" />
+      <circle cx="654" cy="252" r="8.4" fill="#d8d5cd" />
+    </g>
+  <rect width="1000" height="700" filter="url(#grain-21)" opacity="0.6" />
+  <rect width="1000" height="700" fill="url(#vig-21)" />
+
+  <rect x="18" y="18" width="964" height="664" fill="none" stroke="#d8d5cd" stroke-opacity="0.25" stroke-width="1" />
+
+  <text x="34" y="46" font-family="Jost, sans-serif" font-size="15" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.65">LICENSE PLATES</text>
+
+  <text x="500" y="636" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" letter-spacing="4" fill="#d8d5cd" fill-opacity="0.5">PLACEHOLDER IMAGE</text>
+  <text x="500" y="662" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#ece9e2" fill-opacity="0.85">Texas — El Paso Plate</text>
+</svg>

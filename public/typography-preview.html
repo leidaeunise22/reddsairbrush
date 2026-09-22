@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Typography Preview — Chicano Lettering Candidates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Macondo&family=Macondo+Swash+Caps&family=New+Rocker&family=Inter:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  :root {
+    --void: #050505;
+    --charcoal: #121212;
+    --iron: #2a2a2a;
+    --ash: #7d7d7a;
+    --silver: #a8a6a0;
+    --bone: #d8d5cd;
+    --paper: #ece9e2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--paper);
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .intro {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 24px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--iron);
+  }
+  .intro .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--ash);
+    margin: 0 0 12px;
+  }
+  .intro h1 {
+    font-size: 32px;
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .intro p {
+    color: var(--silver);
+    line-height: 1.6;
+    font-size: 15px;
+    margin: 0 auto 8px;
+    max-width: 640px;
+  }
+  .intro .note {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ash);
+    margin-top: 20px;
+  }
+
+  .candidate {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    border-bottom: 1px solid var(--iron);
+    position: relative;
+  }
+  .candidate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .candidate-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .candidate-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ash);
+  }
+  .candidate-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--paper);
+  }
+  .badge {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 1px solid var(--iron);
+    color: var(--bone);
+  }
+  .badge.free { border-color: #4a4a48; }
+  .badge.commercial { border-color: #6b5a3a; color: #c9b98a; }
+
+  .sample-block { margin-bottom: 22px; }
+  .sample-block .tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ash);
+    margin-bottom: 6px;
+  }
+  .sample-block .display {
+    color: var(--paper);
+    line-height: 1.15;
+  }
+  .h-hero { font-size: clamp(32px, 5vw, 56px); }
+  .h-section { font-size: clamp(26px, 4vw, 40px); }
+  .h-small { font-size: 22px; }
+  .glyphs {
+    margin-top: 20px;
+    font-size: 30px;
+    color: var(--silver);
+    letter-spacing: 0.05em;
+  }
+  .why {
+    margin-top: 24px;
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--silver);
+    max-width: 640px;
+  }
+
+  .commercial-note {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  .commercial-note h2 {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ash);
+    margin-bottom: 16px;
+  }
+  .commercial-note .card {
+    border: 1px solid var(--iron);
+    background: var(--charcoal);
+    padding: 28px;
+  }
+  .commercial-note p {
+    color: var(--silver);
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 720px;
+  }
+  .commercial-note strong { color: var(--paper); }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px 60px;
+    color: var(--ash);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+  <div class="intro">
+    <p class="eyebrow">Typography Preview — Not Live On The Site</p>
+    <h1>Chicano Tattoo Lettering Candidates</h1>
+    <p>
+      Three real, properly-licensed, embeddable fonts below — applied to the site's
+      actual heading copy so you can judge them in context, not as an alphabet chart.
+      Pick one and it becomes the single <code>--font-gothic</code> value used
+      everywhere: About, Portfolio, Featured Work / Tattoos / Airbrush, Book Your
+      Piece, and the footer wordmark.
+    </p>
+    <p class="note">Halloween section headings are not affected by this choice — they stay on the current font either way.</p>
+  </div>
+
+  <!-- Candidate 1 -->
+  <section class="candidate">
+    <div class="candidate-header">
+      <div>
+        <div class="candidate-label">Option A</div>
+        <div class="candidate-name">Eagle Lake</div>
+      </div>
+      <span class="badge free">Free · SIL OFL · Google Fonts</span>
+    </div>
+
+    <div class="sample-block">
+      <div class="tag">About the artist</div>
+      <div class="display h-section" style="font-family:'Eagle Lake', serif;">One Artist.</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Portfolio</div>
+      <div class="display h-hero" style="font-family:'Eagle Lake', serif;">Every Surface, One Vision</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Featured Work / Tattoos / Airbrush</div>
+      <div class="display h-section" style="font-family:'Eagle Lake', serif;">Featured Work</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Book your session</div>
+      <div class="display h-section" style="font-family:'Eagle Lake', serif;">Start Your Piece</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Footer wordmark</div>
+      <div class="display h-small" style="font-family:'Eagle Lake', serif;">Reddtatstoo + Reddsairbrush</div>
+    </div>
+    <div class="glyphs" style="font-family:'Eagle Lake', serif;">A B R S T &amp; a e r s</div>
+    <p class="why">
+      Google's own classification calls this "a rounded blackletter style with
+      flowing swashes" — the closest free match to sharp gothic letterforms fused
+      with calligraphic flourish. Reads as gothic first, ornamental second.
+    </p>
+  </section>
+
+  <!-- Candidate 2 -->
+  <section class="candidate">
+    <div class="candidate-header">
+      <div>
+        <div class="candidate-label">Option B</div>
+        <div class="candidate-name">Macondo Swash Caps</div>
+      </div>
+      <span class="badge free">Free · SIL OFL · Google Fonts</span>
+    </div>
+
+    <div class="sample-block">
+      <div class="tag">About the artist</div>
+      <div class="display h-section" style="font-family:'Macondo Swash Caps', cursive;">One Artist.</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Portfolio</div>
+      <div class="display h-hero" style="font-family:'Macondo Swash Caps', cursive;">Every Surface, One Vision</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Featured Work / Tattoos / Airbrush</div>
+      <div class="display h-section" style="font-family:'Macondo Swash Caps', cursive;">Featured Work</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Book your session</div>
+      <div class="display h-section" style="font-family:'Macondo Swash Caps', cursive;">Start Your Piece</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Footer wordmark</div>
+      <div class="display h-small" style="font-family:'Macondo Swash Caps', cursive;">Reddtatstoo + Reddsairbrush</div>
+    </div>
+    <div class="glyphs" style="font-family:'Macondo Swash Caps', cursive;">A B R S T &amp; a e r s</div>
+    <p class="why">
+      Warmer and more ornamental — decorative swash capitals paired with a
+      calligraphic lowercase. Less "gothic," more hand-lettered plaque/banner
+      script. Softer read than Option A; best if you want flourish over sharpness.
+    </p>
+  </section>
+
+  <!-- Candidate 3 -->
+  <section class="candidate">
+    <div class="candidate-header">
+      <div>
+        <div class="candidate-label">Option C</div>
+        <div class="candidate-name">New Rocker</div>
+      </div>
+      <span class="badge free">Free · SIL OFL · Google Fonts</span>
+    </div>
+
+    <div class="sample-block">
+      <div class="tag">About the artist</div>
+      <div class="display h-section" style="font-family:'New Rocker', serif;">One Artist.</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Portfolio</div>
+      <div class="display h-hero" style="font-family:'New Rocker', serif;">Every Surface, One Vision</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Featured Work / Tattoos / Airbrush</div>
+      <div class="display h-section" style="font-family:'New Rocker', serif;">Featured Work</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Book your session</div>
+      <div class="display h-section" style="font-family:'New Rocker', serif;">Start Your Piece</div>
+    </div>
+    <div class="sample-block">
+      <div class="tag">Footer wordmark</div>
+      <div class="display h-small" style="font-family:'New Rocker', serif;">Reddtatstoo + Reddsairbrush</div>
+    </div>
+    <div class="glyphs" style="font-family:'New Rocker', serif;">A B R S T &amp; a e r s</div>
+    <p class="why">
+      Sharper and more aggressive — spiked serifs, high stroke contrast, reads as
+      hand-cut stencil/shop-sign lettering. Almost no flourish or swash, so it
+      leans harder into "sharp gothic" than "flowing calligraphic."
+    </p>
+  </section>
+
+  <div class="commercial-note">
+    <h2>The exact match to your reference image</h2>
+    <div class="card">
+      <p>
+        The font in your reference image is labeled <strong>"Chico Mato"</strong> —
+        a commercial script/blackletter hybrid typeface (the genuine "Chicano
+        lettering" genre lives almost entirely in paid type foundries, not Google
+        Fonts). I can't embed it here: I don't have a license for it, and per your
+        instructions I won't download or bundle an unlicensed font file.
+      </p>
+      <p>
+        If you want a pixel-match to that reference specifically, you'd need to
+        purchase a license for <strong>Chico Mato</strong> (or a similar Chicano
+        tattoo-lettering font pack) yourself. Once you have the licensed
+        <code>.woff2</code>/<code>.woff</code> files, send them over — the site
+        already has a drop-in slot for exactly this (<code>src/assets/fonts/</code>,
+        documented in that folder's README) and I'll wire it in the same way,
+        no other code changes needed.
+      </p>
+      <p>
+        In the meantime, any of the three options above is real, free, properly
+        licensed, and ready to implement today.
+      </p>
+    </div>
+  </div>
+
+  <footer>Reload after picking one — nothing here is applied to the live site yet.</footer>
+
+</body>
+</html>

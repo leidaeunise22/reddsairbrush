@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <defs>
+    <linearGradient id="bg-18" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c" />
+      <stop offset="55%" stop-color="#161616" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="vig-18" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+    </radialGradient>
+    <filter id="grain-18">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0" />
+    </filter>
+  </defs>
+
+  <rect width="1000" height="700" fill="url(#bg-18)" />
+  <rect width="1000" height="700" fill="#343434" opacity="0.15" />
+  
+    <g stroke="#d8d5cd" stroke-width="8.4" fill="none" opacity="0.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 290 392 q 0 -56 70 -70 q 56 -112 140 -70 q 70 28 126 14 q 70 -14 84 56 q 14 70 -42 84 l -350 14 Z" />
+      <line x1="416" y1="280" x2="486" y2="238" />
+      <line x1="472" y1="308" x2="542" y2="266" />
+    </g>
+  <rect width="1000" height="700" filter="url(#grain-18)" opacity="0.6" />
+  <rect width="1000" height="700" fill="url(#vig-18)" />
+
+  <rect x="18" y="18" width="964" height="664" fill="none" stroke="#d8d5cd" stroke-opacity="0.25" stroke-width="1" />
+
+  <text x="34" y="46" font-family="Jost, sans-serif" font-size="15" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.65">SHOES</text>
+
+  <text x="500" y="636" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" letter-spacing="4" fill="#d8d5cd" fill-opacity="0.5">PLACEHOLDER IMAGE</text>
+  <text x="500" y="662" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#ece9e2" fill-opacity="0.85">Custom Portrait — Sneaker</text>
+</svg>

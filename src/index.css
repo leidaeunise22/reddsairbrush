@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Optional licensed premium Chicano/blackletter font (Chico Mato, Qustyle,
+   or Kingdom of Heaven). Inert until you add font files and rename the
+   .example file — see src/assets/fonts/README.md. Safe to leave commented
+   out indefinitely; --font-gothic below falls back to Eagle Lake either way. */
+/* @import "./assets/fonts/premium-fonts.css"; */
+
+@theme {
+  /* Strict grayscale palette */
+  --color-ink: #070707;
+  --color-void: #050505;
+  --color-charcoal: #121212;
+  --color-graphite: #1c1c1c;
+  --color-iron: #2a2a2a;
+  --color-steel: #3d3d3d;
+  --color-slate: #5a5a5a;
+  --color-ash: #7d7d7a;
+  --color-silver: #a8a6a0;
+  --color-bone: #d8d5cd;
+  --color-paper: #ece9e2;
+  --color-white-smoke: #f5f3ee;
+
+  /* Chicano-tattoo-lettering display font for prominent headings — About,
+     Portfolio, Featured Work/Tattoos/Airbrush, Book Your Piece, footer
+     wordmark. The hero wordmarks themselves are logo images — see
+     src/assets/images/logos/README.md — not this font. Picked from a
+     side-by-side comparison at public/typography-preview.html. "Chico
+     Mato", "Qustyle", and "Kingdom of Heaven" are commercial fonts; until
+     licensed files are added (src/assets/fonts/README.md) those names
+     simply don't resolve and the stack falls back to Eagle Lake (free,
+     properly licensed — Google's own classification: "a rounded
+     blackletter style with flowing swashes"). */
+  --font-gothic: "Chico Mato", "Qustyle", "Kingdom of Heaven", "Eagle Lake", serif;
+  /* Halloween section headings (HalloweenFeature/Gallery/Booking) are
+     deliberately pinned to the previous gothic choice and do NOT follow
+     --font-gothic above — kept separate on purpose, see those components. */
+  --font-halloween: "Pirata One", serif;
+  /* Script accent (e.g. "Two Disciplines." in About). Alex Brush is a
+     bolder, loopier brush-pen script than Dancing Script — free, SIL OFL,
+     Google Fonts — while staying legible (unlike the old Herr Von
+     Muellerhoff). */
+  --font-script: "Alex Brush", "Brush Script MT", cursive;
+  /* Navigation, buttons, body copy, and descriptions all use Inter.
+     font-nav and font-serif are kept as two token names (rather than
+     merged into one) to avoid renaming utility classes across every
+     component, but both resolve to the same Inter stack. */
+  --font-nav: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --animate-flicker: flicker 6s ease-in-out infinite;
+
+  --breakpoint-xs: 30rem;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.85; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-iron);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-paper);
+    font-family: var(--font-nav);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-paper);
+    color: var(--color-void);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-paper);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  /* Fine film-grain overlay, generated via SVG turbulence — no image asset needed */
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: 180px 180px;
+  }
+
+  .vignette::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.65) 100%);
+  }
+
+  .tracking-widest-xl {
+    letter-spacing: 0.35em;
+  }
+
+  .bg-noise-fine {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+}

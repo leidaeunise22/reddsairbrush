@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="hw-bg-200" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c" />
+      <stop offset="55%" stop-color="#101010" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="hw-vig-200" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+    </radialGradient>
+    <filter id="hw-grain-200">
+      <feTurbulence type="fractalNoise" baseFrequency="0.70" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#hw-bg-200)" />
+  <rect width="800" height="1000" fill="#222222" opacity="0.15" />
+  
+    <g stroke="#d8d5cd" stroke-width="9.6" fill="none" opacity="0.5">
+      <ellipse cx="400" cy="444" rx="120" ry="136" />
+      <ellipse cx="352" cy="436" rx="28.000000000000004" ry="36" />
+      <ellipse cx="448" cy="436" rx="28.000000000000004" ry="36" />
+      <line x1="400" y1="468" x2="400" y2="508" />
+      <path d="M 336 540 q 64 40 128 0" />
+      <line x1="360" y1="540" x2="360" y2="572" opacity="0.4" />
+      <line x1="440" y1="540" x2="440" y2="572" opacity="0.4" />
+    </g>
+  <rect width="800" height="1000" filter="url(#hw-grain-200)" opacity="0.6" />
+  <rect width="800" height="1000" fill="url(#hw-vig-200)" />
+
+  <rect x="18" y="18" width="764" height="964" fill="none" stroke="#d8d5cd" stroke-opacity="0.25" stroke-width="1" />
+
+  <text x="34" y="46" font-family="Jost, sans-serif" font-size="15" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.65">HALLOWEEN — SKULLS — BEFORE</text>
+
+  <text x="400" y="936" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" letter-spacing="4" fill="#d8d5cd" fill-opacity="0.5">PLACEHOLDER IMAGE</text>
+  <text x="400" y="962" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#ece9e2" fill-opacity="0.85">Sugar Skull — Before</text>
+</svg>

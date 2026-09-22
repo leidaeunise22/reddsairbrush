@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1400" width="900" height="1400">
+  <defs>
+    <linearGradient id="hbg-100" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b0b" />
+      <stop offset="50%" stop-color="#181818" />
+      <stop offset="100%" stop-color="#080808" />
+    </linearGradient>
+    <radialGradient id="hvig-100" cx="70%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.8" />
+    </radialGradient>
+    <filter id="hgrain-100">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0" />
+    </filter>
+  </defs>
+  <rect width="900" height="1400" fill="url(#hbg-100)" />
+  <g stroke="#d8d5cd" stroke-width="3" fill="none" opacity="0.55" stroke-linecap="round">
+          <path d="M 398 384 q -60 140 -20 320 q 20 100 -10 220" />
+          <path d="M 468 344 q -40 160 0 340 q 20 90 -20 200" opacity="0.35" />
+          <circle cx="498" cy="504" r="70" opacity="0.3" />
+          <path d="M 428 684 q 40 20 70 -10" opacity="0.4" />
+        </g>
+  <rect width="900" height="1400" filter="url(#hgrain-100)" opacity="0.7" />
+  <rect width="900" height="1400" fill="url(#hvig-100)" />
+  <text x="28" y="1372" text-anchor="start" font-family="Jost, sans-serif" font-size="13" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.45">PLACEHOLDER — Tattoo Sleeve Study</text>
+</svg>

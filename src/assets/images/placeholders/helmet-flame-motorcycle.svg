@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg-23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0c0c" />
+      <stop offset="55%" stop-color="#191919" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    <radialGradient id="vig-23" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+    </radialGradient>
+    <filter id="grain-23">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg-23)" />
+  <rect width="1200" height="675" fill="#343434" opacity="0.15" />
+  
+    <g stroke="#d8d5cd" stroke-width="8.1" fill="none" opacity="0.5">
+      <path d="M 451.5 364.5 a 148.5 135 0 0 1 297 0 l 0 13.5 l -297 0 Z" />
+      <line x1="451.5" y1="378" x2="748.5" y2="378" />
+      <path d="M 667.5 378 q 13.5 54 -13.5 81" />
+    </g>
+  <rect width="1200" height="675" filter="url(#grain-23)" opacity="0.6" />
+  <rect width="1200" height="675" fill="url(#vig-23)" />
+
+  <rect x="18" y="18" width="1164" height="639" fill="none" stroke="#d8d5cd" stroke-opacity="0.25" stroke-width="1" />
+
+  <text x="34" y="46" font-family="Jost, sans-serif" font-size="15" letter-spacing="3" fill="#d8d5cd" fill-opacity="0.65">HELMETS</text>
+
+  <text x="600" y="611" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" letter-spacing="4" fill="#d8d5cd" fill-opacity="0.5">PLACEHOLDER IMAGE</text>
+  <text x="600" y="637" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="22" fill="#ece9e2" fill-opacity="0.85">Flame Wrap — Full Helmet</text>
+</svg>

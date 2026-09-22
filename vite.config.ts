@@ -3,15 +3,16 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath } from 'node:url'
 
-// This site deploys to the custom domain reddsairbrush.com (see
-// public/CNAME), which is served from the domain root, so `base` is '/' —
-// not a '/<repo-name>/' subpath. If you ever remove the custom domain and
-// fall back to the default GitHub Pages project-page URL instead
-// (<user>.github.io/<repo-name>/), delete public/CNAME and change `base`
-// below to `/<repo-name>/` in production (or pass VITE_BASE_PATH at build
-// time to override without editing this file).
+// Currently deploying to the default GitHub Pages project-page URL —
+// https://leidaeunise22.github.io/reddsairbrush/ — which is served from a
+// '/reddsairbrush/' subpath, not the domain root. When the custom domain
+// (reddsairbrush.com) is ready to go live: add public/CNAME back containing
+// "reddsairbrush.com", change `base` below to '/', and set the custom
+// domain in Settings → Pages (see README.md's deployment section).
+const REPO_NAME = 'reddsairbrush'
+
 export default defineConfig(() => ({
-  base: process.env.VITE_BASE_PATH ?? '/',
+  base: process.env.VITE_BASE_PATH ?? `/${REPO_NAME}/`,
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

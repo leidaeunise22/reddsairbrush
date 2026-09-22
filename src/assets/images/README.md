@@ -36,13 +36,26 @@ steps below to replace those as real photos come in.
 
 ## `halloween/`
 
-Real photography for the Halloween homepage feature (`HalloweenFeature.tsx`,
-wired up via `src/data/seasonal.ts`). Rendered in grayscale (plus a
-contrast boost) via CSS, same treatment as `tattoo/`, so it matches the
-rest of the site rather than being a color exception. The Halloween
-portfolio gallery's own photos (`HalloweenGallery.tsx`,
-`src/data/halloween.ts`) still use `placeholders/` — see that data file to
-swap those in the same way as below.
+Real client photography — no placeholders left in this category.
+
+- **`group-body-art.jpg`, `body1.jpg`, `body2.jpg`** — used in
+  `HalloweenFeature.tsx` (the homepage "Become the Art" promo), wired up
+  via `src/data/seasonal.ts`. `group-body-art.jpg` is the full picture
+  shown centered (`object-contain`, never cropped); `body1`/`body2` fill
+  the space on either side. Rendered in grayscale via CSS (plus a contrast
+  boost), same treatment as `tattoo/`.
+- **Everything else** (`DOD1/2`, `skull1-6`, `clown1`, `nun1`, `joker1`,
+  `avatar1/2`, `pumpkin1/2`, `body3/4`) populates the Halloween portfolio
+  gallery (`HalloweenGallery.tsx`, `src/data/halloween.ts`) — one project
+  per photo. These render **grayscale by default and reveal full color on
+  hover** (`grayscale` → `group-hover:grayscale-0` in
+  `HalloweenGallery.tsx`'s tile image), unlike the rest of the site's
+  always-grayscale photography. The lightbox (`ArtworkLightbox.tsx`) shows
+  full color always, with no hover required.
+
+To add more: drop a new photo in this folder, add an entry to
+`halloweenProjects` in `src/data/halloween.ts` (theme, title, image,
+alt) — no component changes needed.
 
 ## Replacing placeholders with real photography
 

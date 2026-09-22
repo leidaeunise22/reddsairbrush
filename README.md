@@ -51,7 +51,8 @@ public/
   typography-preview.html   standalone font-comparison page (not part of
                       the built app's routes) — see Chicano/blackletter
                       font section below
-  CNAME               reddsairbrush.com
+                     (no CNAME file yet — see "Switching to a custom
+                      domain later" below)
 src/
   components/       Navbar, Hero, About, Portfolio, CategoryGallery,
                      FeaturedWork, ArtworkLightbox, Booking, BookingForm,
@@ -265,31 +266,35 @@ GitHub Pages on every push to `main`, using the standard
 3. Push to `main`. The workflow builds and deploys automatically; the
    Pages URL appears in the Actions run summary and in Settings → Pages.
 
-### Custom domain (reddsairbrush.com) — already configured
+### Current setup: default GitHub Pages project URL
 
-This repo is set up to deploy at the custom domain **reddsairbrush.com**:
+This repo currently deploys to the default GitHub Pages project-page URL —
+**https://leidaeunise22.github.io/reddsairbrush/** — not a custom domain
+yet. That URL is served from a `/reddsairbrush/` subpath, which is why
+`vite.config.ts` sets `base: `/${REPO_NAME}/`` (`REPO_NAME = 'reddsairbrush'`)
+instead of `'/'`. If `base` doesn't match the actual serving path, the
+built `index.html` references asset URLs like `/assets/index-xyz.js` that
+resolve to the wrong location and the page loads blank (styles/scripts
+404) — that's the failure mode this setting exists to avoid.
 
-- `public/CNAME` contains `reddsairbrush.com` — Vite copies everything in
-  `public/` into `dist/` on build, so GitHub Pages picks it up
-  automatically on every deploy.
-- `vite.config.ts` sets `base: '/'` (a custom domain is served from the
-  domain root, not a `/repo-name/` subpath), which is why every asset —
-  including the logo images above — resolves correctly at that domain.
+If the repo is ever renamed, update `REPO_NAME` in `vite.config.ts` to
+match and redeploy.
 
-You still need to point DNS at GitHub Pages and confirm the domain in
-**Settings → Pages → Custom domain** (GitHub will show DNS instructions —
-an `A`/`ALIAS` record for an apex domain like `reddsairbrush.com`, or a
-`CNAME` record for a `www` subdomain).
+### Switching to a custom domain later (e.g. reddsairbrush.com)
 
-### Changing the base path (moving off the custom domain, or renaming the repo)
+Once you're ready to point a real domain at this site:
 
-If you ever stop using the custom domain and fall back to the default
-GitHub Pages project-page URL (`https://<user>.github.io/<repo-name>/`)
-instead:
-
-1. Delete `public/CNAME`.
-2. In `vite.config.ts`, change `base: process.env.VITE_BASE_PATH ?? '/'`
-   to `base: process.env.VITE_BASE_PATH ?? '/<repo-name>/'`.
+1. Add a `CNAME` file to `public/` containing just the domain (e.g.
+   `reddsairbrush.com`) — Vite copies everything in `public/` into `dist/`
+   on build, so GitHub Pages picks it up automatically on every deploy
+   after that.
+2. In `vite.config.ts`, change `base: process.env.VITE_BASE_PATH ?? \`/${REPO_NAME}/\``
+   to `base: process.env.VITE_BASE_PATH ?? '/'` (a custom domain is served
+   from the domain root, not a `/repo-name/` subpath).
+3. Point DNS at GitHub Pages and confirm the domain in **Settings → Pages
+   → Custom domain** (GitHub will show DNS instructions — an `A`/`ALIAS`
+   record for an apex domain like `reddsairbrush.com`, or a `CNAME` record
+   for a `www` subdomain).
 
 You can also override the base path at build time without editing the
 file, via `VITE_BASE_PATH=/whatever/ npm run build`.

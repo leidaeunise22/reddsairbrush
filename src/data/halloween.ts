@@ -1,97 +1,150 @@
 import type { HalloweenProject } from "@/types/halloween";
 import type { BookingFormConfig } from "@/types/booking";
 
-import sugarSkullBefore from "@/assets/images/placeholders/halloween-sugar-skull-before.svg";
-import sugarSkullAfter from "@/assets/images/placeholders/halloween-sugar-skull-after.svg";
-import sugarSkullDetail from "@/assets/images/placeholders/halloween-sugar-skull-detail.svg";
-
-import horrorClown1 from "@/assets/images/placeholders/halloween-horror-clown-1.svg";
-import horrorClown2 from "@/assets/images/placeholders/halloween-horror-clown-2.svg";
-
-import zombieBefore from "@/assets/images/placeholders/halloween-zombie-before.svg";
-import zombieAfter from "@/assets/images/placeholders/halloween-zombie-after.svg";
-
-import fantasyCharacter1 from "@/assets/images/placeholders/halloween-fantasy-character-1.svg";
-import fantasyCharacter2 from "@/assets/images/placeholders/halloween-fantasy-character-2.svg";
-import fantasyCharacter3 from "@/assets/images/placeholders/halloween-fantasy-character-3.svg";
-
-import porcelainDollBefore from "@/assets/images/placeholders/halloween-porcelain-doll-before.svg";
-import porcelainDollAfter from "@/assets/images/placeholders/halloween-porcelain-doll-after.svg";
-
-import skeletalKing1 from "@/assets/images/placeholders/halloween-skeletal-king-1.svg";
-import skeletalKing2 from "@/assets/images/placeholders/halloween-skeletal-king-2.svg";
+import dod1 from "@/assets/images/halloween/DOD1.jpg";
+import dod2 from "@/assets/images/halloween/DOD2.jpg";
+import skull1 from "@/assets/images/halloween/skull1.jpg";
+import skull2 from "@/assets/images/halloween/skull2.jpg";
+import skull3 from "@/assets/images/halloween/skull3.jpg";
+import skull4 from "@/assets/images/halloween/skull4.jpg";
+import skull5 from "@/assets/images/halloween/skull5.jpg";
+import skull6 from "@/assets/images/halloween/skull6.jpg";
+import clown1 from "@/assets/images/halloween/clown1.jpg";
+import nun1 from "@/assets/images/halloween/nun1.jpg";
+import joker1 from "@/assets/images/halloween/joker1.jpg";
+import avatar1 from "@/assets/images/halloween/avatar1.jpg";
+import avatar2 from "@/assets/images/halloween/avatar2.jpg";
+import pumpkin1 from "@/assets/images/halloween/pumpkin1.jpg";
+import pumpkin2 from "@/assets/images/halloween/pumpkin2.jpg";
+import body3 from "@/assets/images/halloween/body3.jpg";
+import body4 from "@/assets/images/halloween/body4.jpg";
 
 /**
- * Halloween face-painting projects. Each is a whole "look," not a single
- * photo — supports multiple in-progress/detail shots (`images`) and an
- * optional before/after pair. Add/remove/reorder here; HalloweenGallery.tsx
- * and HalloweenFeature.tsx both read from this array, no component changes
- * needed. See src/assets/images/README.md for swapping placeholders for
- * real client photos (with the client's permission to publish).
+ * Halloween face-painting projects — real client photography. Each is a
+ * whole "look," not a single photo — supports multiple in-progress/detail
+ * shots (`images`) and an optional before/after pair. Add/remove/reorder
+ * here; HalloweenGallery.tsx and HalloweenFeature.tsx both read from this
+ * array, no component changes needed. See src/assets/images/README.md.
  */
 export const halloweenProjects: HalloweenProject[] = [
   {
-    id: "sugar-skull-portrait",
-    title: "Sugar Skull Portrait",
+    id: "dia-de-los-muertos-portrait",
+    title: "Día de los Muertos Portrait",
     theme: "skulls",
-    description: "Full-face sugar skull design, fine linework and dimensional shading.",
-    before: { src: sugarSkullBefore, alt: "Placeholder photo of a client's bare face before sugar skull face painting" },
-    after: { src: sugarSkullAfter, alt: "Placeholder artwork representing a finished sugar skull face painting look" },
-    images: [
-      { src: sugarSkullDetail, alt: "Placeholder detail shot of sugar skull face painting linework" },
-    ],
+    description: "Classic sugar skull design in profile, fine linework and red accent detailing.",
+    images: [{ src: dod1, alt: "Profile view of a man with a black and white Día de los Muertos sugar skull face paint design" }],
+    featured: true,
+  },
+  {
+    id: "la-catrina",
+    title: "La Catrina",
+    theme: "skulls",
+    description: "Full Día de los Muertos look with a floral crown and lace veil, red and blue accent work.",
+    images: [{ src: dod2, alt: "Woman with a Día de los Muertos sugar skull face paint design, floral headpiece, and lace veil" }],
+    featured: true,
+  },
+  {
+    id: "classic-skeleton",
+    title: "Classic Skeleton",
+    theme: "skulls",
+    images: [{ src: skull1, alt: "Man with a black and white classic skeleton face paint design" }],
+  },
+  {
+    id: "skeleton-duo",
+    title: "Skeleton Duo",
+    theme: "skulls",
+    description: "Matching skeleton looks for two, full coverage from hairline to neck.",
+    images: [{ src: skull2, alt: "Two men with matching black and white skeleton face paint designs" }],
+  },
+  {
+    id: "skeleton-closeup",
+    title: "Skeleton Study",
+    theme: "skulls",
+    images: [{ src: skull3, alt: "Close-up portrait of a man with a skeleton face paint design" }],
+  },
+  {
+    id: "full-head-skeleton",
+    title: "Full Head Skeleton",
+    theme: "skulls",
+    description: "Full scalp-to-neck skeleton coverage with cracked-bone texture detailing.",
+    images: [{ src: skull4, alt: "Man with a full head and neck skeleton face paint design" }],
+  },
+  {
+    id: "skeleton-couple",
+    title: "Skeleton Couple",
+    theme: "skulls",
+    images: [{ src: skull6, alt: "A couple with matching black and white skeleton face paint designs" }],
+  },
+  {
+    id: "tribal-demon-mask",
+    title: "Tribal Demon Mask",
+    theme: "horror",
+    description: "Full scalp coverage tribal-style demon mask with sweeping linework.",
+    images: [{ src: skull5, alt: "Man with a full head tribal-style demon mask face paint design" }],
+  },
+  {
+    id: "haunted-nun",
+    title: "Haunted Nun",
+    theme: "horror",
+    description: "Horror-movie-inspired nun look — cracked, weeping skin texture under a habit and veil.",
+    images: [{ src: nun1, alt: "Person in a nun's habit with a horror-style cracked skin face paint design" }],
     featured: true,
   },
   {
     id: "horror-clown",
-    title: "Classic Horror Clown",
+    title: "Horror Clown",
     theme: "clowns",
-    description: "Weathered, unsettling clown look — cracked paint texture and deep shadow work.",
-    images: [
-      { src: horrorClown1, alt: "Placeholder artwork representing a horror clown face painting look, front view" },
-      { src: horrorClown2, alt: "Placeholder artwork representing a horror clown face painting look, side detail" },
-    ],
+    description: "Unsettling clown look with a red nose and lip accent against stark black and white paint.",
+    images: [{ src: clown1, alt: "Woman with a black and white horror clown face paint design and red nose accent" }],
     featured: true,
   },
   {
-    id: "zombie-transformation",
-    title: "Zombie Transformation",
-    theme: "horror",
-    description: "Full zombie transformation — torn skin texture, sunken eyes, exposed bone detailing.",
-    before: { src: zombieBefore, alt: "Placeholder photo of a client's bare face before zombie face painting" },
-    after: { src: zombieAfter, alt: "Placeholder artwork representing a finished zombie transformation face painting look" },
-    images: [],
-  },
-  {
-    id: "dark-fantasy-character",
-    title: "Dark Fantasy Character",
+    id: "damaged-joker",
+    title: "Damaged",
     theme: "character",
-    description: "Original character transformation blending face paint with sculptural prosthetic accents.",
-    images: [
-      { src: fantasyCharacter1, alt: "Placeholder artwork representing a dark fantasy character face painting look, look 1" },
-      { src: fantasyCharacter2, alt: "Placeholder detail shot of dark fantasy character face painting" },
-      { src: fantasyCharacter3, alt: "Placeholder artwork representing a dark fantasy character face painting look, look 3" },
-    ],
+    description: "Full character transformation with green hair, painted grin, and body-paint tattoo details.",
+    images: [{ src: joker1, alt: "Man with a Joker-inspired character face and body paint transformation, green hair, painted grin on hand" }],
     featured: true,
   },
   {
-    id: "cracked-porcelain-doll",
-    title: "Cracked Porcelain Doll",
-    theme: "custom",
-    description: "Custom porcelain-doll concept — cracked glaze texture with hand-painted rosy accents.",
-    before: { src: porcelainDollBefore, alt: "Placeholder photo of a client's bare face before porcelain doll face painting" },
-    after: { src: porcelainDollAfter, alt: "Placeholder artwork representing a finished cracked porcelain doll face painting look" },
-    images: [],
+    id: "navi-warrior-i",
+    title: "Na'vi Warrior I",
+    theme: "character",
+    description: "Full-body blue character transformation with sculpted ear prosthetics and feather accents.",
+    images: [{ src: avatar1, alt: "Full-body blue Na'vi-inspired character body paint transformation with ear prosthetics" }],
   },
   {
-    id: "skeletal-king",
-    title: "Skeletal King",
-    theme: "skulls",
-    description: "Regal skeletal king concept with an ornamental crown motif painted directly onto the skin.",
-    images: [
-      { src: skeletalKing1, alt: "Placeholder artwork representing a skeletal king face painting look, front view" },
-      { src: skeletalKing2, alt: "Placeholder detail shot of skeletal king crown facepainting motif" },
-    ],
+    id: "navi-warrior-ii",
+    title: "Na'vi Warrior II",
+    theme: "character",
+    images: [{ src: avatar2, alt: "Full-body blue Na'vi-inspired character body paint transformation, side profile" }],
+  },
+  {
+    id: "jack-o-lantern-i",
+    title: "Jack-o'-Lantern I",
+    theme: "custom",
+    description: "Classic carved-pumpkin face extending down the neck, warm orange and black.",
+    images: [{ src: pumpkin1, alt: "Woman with a jack-o'-lantern style face and neck paint design in orange and black" }],
+  },
+  {
+    id: "jack-o-lantern-ii",
+    title: "Jack-o'-Lantern II",
+    theme: "custom",
+    images: [{ src: pumpkin2, alt: "Man with a jack-o'-lantern style face paint design in orange and black" }],
+  },
+  {
+    id: "white-tiger",
+    title: "White Tiger",
+    theme: "custom",
+    description: "Full-body tiger stripe concept over a two-piece, orange and black on a pale base.",
+    images: [{ src: body3, alt: "Full-body white tiger stripe body paint design" }],
+  },
+  {
+    id: "magenta-spiral",
+    title: "Magenta Spiral",
+    theme: "custom",
+    description: "Bold hand-painted spiral pattern in magenta and violet, full body coverage.",
+    images: [{ src: body4, alt: "Full-body magenta and violet spiral body paint design" }],
   },
 ];
 

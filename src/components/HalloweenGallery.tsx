@@ -128,7 +128,7 @@ export function HalloweenGallery() {
                     src={cover.src}
                     alt={cover.alt}
                     loading="lazy"
-                    className="h-full w-full object-cover opacity-95 transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                    className="h-full w-full object-cover opacity-95 grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-[1.06] group-hover:grayscale-0"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void/90 via-void/10 to-transparent" />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">

@@ -9,7 +9,8 @@ import heroRight from "@/assets/images/tattoo/tattoo-rose-memorial-sleeve.jpg";
 // Real extracted brand artwork — lives in public/ (not src/assets) so it's
 // served as-is at a stable root-relative path. BASE_URL is prefixed so the
 // path resolves correctly under Vite's configured `base` (see
-// vite.config.ts) both in dev and once deployed to reddsairbrush.com.
+// vite.config.ts) in dev, at the GitHub Pages project URL, and once a
+// custom domain is added later.
 const BRANDING_BASE = `${import.meta.env.BASE_URL}images/branding`;
 const logoTattoo = `${BRANDING_BASE}/reddtatstoo.png`;
 const logoAirbrush = `${BRANDING_BASE}/reddsairbrush.png`;
